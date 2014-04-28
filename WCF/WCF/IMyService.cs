@@ -12,5 +12,15 @@ namespace WCF
     {
         [OperationContract]
         string GetData();
+
+        [OperationContract]
+        string GetMessage(String Name);
+
+        [OperationContract]
+        string GetResult(Student std);
+
+        [OperationContract]
+        int GetMax(int[] arr);
     }
+
 }

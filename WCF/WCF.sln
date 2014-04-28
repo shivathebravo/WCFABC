@@ -5,6 +5,22 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF", "WCF\WCF.csproj", "{9516EEE9-7686-41F9-A0BF-6FE237FAD552}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFClient", "WCFClient\WCFClient.csproj", "{84AD152C-712B-4157-8E58-C2D736E19F4D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9516EEE9-7686-41F9-A0BF-6FE237FAD552} = {9516EEE9-7686-41F9-A0BF-6FE237FAD552}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{F4A720D5-3B3E-4D2C-843F-04DC8E779785}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebAppPublishModule.psm1 = PublishScripts\AzureWebAppPublishModule.psm1
+		PublishScripts\Publish-WebApplication.ps1 = PublishScripts\Publish-WebApplication.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{63E23E90-BB96-4F1A-80CF-0584C59907AA}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\WCFClient-WAWS-dev.json = PublishScripts\Configurations\WCFClient-WAWS-dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +31,15 @@ Global
 		{9516EEE9-7686-41F9-A0BF-6FE237FAD552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9516EEE9-7686-41F9-A0BF-6FE237FAD552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9516EEE9-7686-41F9-A0BF-6FE237FAD552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84AD152C-712B-4157-8E58-C2D736E19F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84AD152C-712B-4157-8E58-C2D736E19F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84AD152C-712B-4157-8E58-C2D736E19F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84AD152C-712B-4157-8E58-C2D736E19F4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63E23E90-BB96-4F1A-80CF-0584C59907AA} = {F4A720D5-3B3E-4D2C-843F-04DC8E779785}
 	EndGlobalSection
 EndGlobal
