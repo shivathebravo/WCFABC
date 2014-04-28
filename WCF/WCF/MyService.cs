@@ -1,5 +1,9 @@
-﻿using System;
+﻿
+using DataModel;
+using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+
 
 namespace WCF
 {
@@ -38,6 +42,13 @@ namespace WCF
             }
             return Max;
         }
+        public List<Customer> GetAllCustomer()
+        {
+            FOODMENUEntities fe = new FOODMENUEntities();
+            var result=fe.CUSTOMERs.ToList();
+            return result;
+            
+        }
 
     }
     [DataContract]
@@ -54,4 +65,16 @@ namespace WCF
         [DataMember]
         public int M3 { get; set; }
     }
+
+    [DataContract]
+    public class Customer
+    {
+        [DataMember]
+        public int CustomerID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+    }
+
+
 }

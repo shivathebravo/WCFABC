@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WCF
 {
     [ServiceContract]
-    interface IMyService
+   public interface IMyService
     {
         [OperationContract]
         string GetData();
@@ -21,6 +21,9 @@ namespace WCF
 
         [OperationContract]
         int GetMax(int[] arr);
+
+        [OperationContract]
+        List<Customer> GetAllCustomer();
     }
 
 }
